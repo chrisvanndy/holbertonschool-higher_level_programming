@@ -14,7 +14,7 @@ int check_cycle(listint_t *list)
 	torty = list;
 	harry = list;
 	
-	while(totry->next != NULL && harry->next->next != NULL)
+	while(totry && harry && harry->next)
 	{
 		torty = torty->next;
 		harry = harry->next->next;
