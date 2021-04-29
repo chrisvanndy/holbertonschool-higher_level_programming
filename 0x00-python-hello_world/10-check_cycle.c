@@ -1,7 +1,5 @@
 #include "lists.h"
-#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 /**
  * check_cycle - checks a linked list for a cycle / loop
  * @list: pointer to linked list
@@ -9,16 +7,16 @@
  */
 int check_cycle(listint_t *list)
 {
-	const listint_t *torty, *harry;
+	const listint_t *t, *h;
 
-	torty = list;
-	harry = list;
-	
-	while(totry && harry && harry->next)
+	t = list;
+	h = list;
+
+	while (t && h && h->next)
 	{
-		torty = torty->next;
-		harry = harry->next->next;
-		if (torty == harry)
+		t = t->next;
+		h = h->next->next;
+		if (t == h)
 			return (1);
 	}
 	return (0);
