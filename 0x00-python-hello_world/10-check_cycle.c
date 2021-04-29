@@ -9,8 +9,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *torty;
-	listint_t *harry;
+	const listint_t *torty, *harry;
 
 	torty = list;
 	harry = list;
