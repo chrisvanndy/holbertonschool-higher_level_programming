@@ -37,6 +37,8 @@ class Square:
     def my_print(self):
         """ Prints the square using area() with # character
         """
+        if self.__size == 0:
+            print()
         for i in range(self.__size):
             for i in range(self.__size):
                 print("#", end="")
