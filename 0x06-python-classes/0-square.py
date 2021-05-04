@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-class Square:
-    """ Setting up an empty class declaration for type Squarei 
-    """
+    """ Define Class for Square """
 
+
+class Square:
+    """ Setting up an empty class declaration for type Square"""
     pass
