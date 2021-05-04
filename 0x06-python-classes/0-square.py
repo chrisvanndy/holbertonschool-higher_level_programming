@@ -1,3 +1,6 @@
 #!/usr/bin/python3
 class Square:
-    pass 
+    """ Setting up an empty class declaration for type Square
+    """
+
+    pass
