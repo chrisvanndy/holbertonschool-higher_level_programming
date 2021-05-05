@@ -21,8 +21,9 @@ class Rectangle:
         """ width setter sets private variable based on parameters """
         if type(value) is not int:
             raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must >= 0")
+        elif type(value) is int:
+            if value < 0:
+                raise ValueError("width must >= 0")
         else:
             self.__width = value
 
@@ -36,7 +37,8 @@ class Rectangle:
         """ height setter sets private variable based on parameters """
         if type(value) is not int: 
             raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height  must >= 0")
+        elif type(value) is int 
+            if value < 0:
+                raise ValueError("height  must >= 0")
         else:
             self.__height = value
