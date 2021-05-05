@@ -51,6 +51,7 @@ class Rectangle:
         """ perimeter is a public method returns perimeter of Rectangle """
         perimeter = ((self.__height * 2) + (self.__width * 2))
         return perimeter
+
     def area(self):
         """ area is a public method returns area of a Rectangle """
         area = self.__height * self.__width
