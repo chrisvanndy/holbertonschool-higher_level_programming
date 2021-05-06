@@ -1,0 +1,43 @@
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("This is a standard sentence.")
+This is a standard sentence.
+
+>>> text_indentation("This is Bob.  He has friends: Beth, Tommy and Sarah")
+This is Bob.
+<BLANKLINE>
+ He has friends:
+<BLANKLINE>
+Beth, Tommy and Sarah
+
+>>> text_indentation("Do you a question? I have two new lines for you.")
+Do you a question?
+<BLANKLINE>
+I have two new lines for you.
+
+>>> text_indentation("D. is for Doing Great!: C. is for Care to dance? ")
+D.
+<BLANKLINE>
+is for Doing Great!:
+<BLANKLINE>
+C.
+<BLANKLINE>
+is for Care to dance?
+<BLANKLINE>
+
+>>> text_indentation(" . : ? :: ?? .. .")
+ .
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+<BLANKLINE>
+::
+<BLANKLINE>
+??
+<BLANKLINE>
+..
+<BLANKLINE>
+.
+
