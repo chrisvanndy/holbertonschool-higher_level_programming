@@ -9,8 +9,8 @@ class Square:
     """ Square contains perameters which define the class type square
     """
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -39,8 +39,11 @@ class Square:
     def position(self, value):
         """ position(self, value) is the setter function for position()
         """
-        if not (isinstance(value, tuple, int) and
-                len(value) != 2 and min(value) < 0):
+        if not isinstance(value, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(value[0]) is not int or type(value[1]) is not int:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if len(value) != 2 or  min(value) < 0:
             self.__position = (0, 0)
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
@@ -49,20 +52,20 @@ class Square:
     def area(self):
         """ Returns the area of class type square
         """
-        area = self.__size ** 2
+        area = self.size ** 2
         return area
 
     def my_print(self):
         """ Prints the square using area() with # character
         """
-        if self.__size == 0:
+        if self.size == 0:
             print()
         else:
-            for i in range(self.__position[1]):
+            for i in range(self.position[1]):
                 print()
-            for i in range(self.__size):
-                for k in range(self.__position[0]):
+            for i in range(self.size):
+                for k in range(self.position[0]):
                     print(" ", end="")
-                for j in range(self.__size):
+                for j in range(self.size):
                     print("#", end="")
                 print()
