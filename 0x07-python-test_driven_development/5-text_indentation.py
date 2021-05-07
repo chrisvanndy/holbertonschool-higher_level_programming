@@ -21,7 +21,7 @@ def text_indentation(text):
             new_str += text_list[bit] + '.\n\n'
         else:
             new_str += text_list[bit]
-    
+
     text_list2 = new_str.split(": ")
     for bit in range(len(text_list2)):
         if bit < len(text_list2) - 1:
@@ -36,5 +36,4 @@ def text_indentation(text):
         else:
             new_str3 += text_list3[bit]
 
-
-    print ("{}".format(new_str3), end="")
+    print("{}".format(new_str3), end="")

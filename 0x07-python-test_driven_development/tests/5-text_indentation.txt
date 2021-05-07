@@ -41,3 +41,9 @@ is for Care to dance?
 <BLANKLINE>
 .
 
+>>> text_indentation("Holberton.School")
+Holberton.School
+
+>>> text_indentation("Holberton?School:is a cool school.")
+Holberton?School:is a cool school.
+
