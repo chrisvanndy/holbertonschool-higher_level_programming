@@ -6,7 +6,7 @@ def print_square(size):
     """ print_square handles printing of square under certain conditions """
     if isinstance(size, int):
         if size < 0:
-            raise ValueError("size must be >=0")
+            raise ValueError("size must be >= 0")
         if isinstance(size, float):
             if size < 0:
                 raise ValueError("size must be an integer")
