@@ -23,3 +23,6 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer("string"))
         self.assertRaises(TypeError, max_integer((1, 2)))
         self.assertRaises(TypeError, max_integer([2.0, 1]))
+
+if __name__ == '__main__':
+    unittest.main()
