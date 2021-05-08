@@ -19,6 +19,8 @@ class Rectangle:
 
     def __str__(self):
         string = ""
+        if self.width == 0 or self.height == 0:
+            return string
         for i in range(self.height):
             for j in range(self.width):
                 string += "#"
@@ -60,10 +62,10 @@ class Rectangle:
         """ perimeter is a public method returns perimeter of Rectangle """
         if self.width == 0 or self.height == 0:
             return "0"
-        perimeter = ((self.__height * 2) + (self.__width * 2))
+        perimeter = ((self.height * 2) + (self.width * 2))
         return perimeter
 
     def area(self):
         """ area is a public method returns area of a Rectangle """
-        area = self.__height * self.__width
+        area = self.height * self.width
         return area
