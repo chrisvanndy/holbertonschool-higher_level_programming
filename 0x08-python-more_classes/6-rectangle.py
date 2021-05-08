@@ -35,7 +35,7 @@ class Rectangle:
         print("Bye rectangle...")
 
         Rectangle.number_of_instances -= 1
- 
+
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
 
