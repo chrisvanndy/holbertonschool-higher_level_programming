@@ -29,7 +29,7 @@ class Rectangle:
         return "".format(end="").join(string)
 
     def __repr__(self):
-        return "Rectangle({},{})".format(self.width, self.height)
+        return "Rectangle({}, {})".format(self.width, self.height)
 
     @property
     def width(self):
