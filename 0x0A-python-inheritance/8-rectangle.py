@@ -2,7 +2,7 @@
 """Define BaseGeometry, an empty class"""
 
 
-class BaseGeometry():
+class BaseGeometry:
     """ BaseGeometry is the super() class """
 
     def area(self):
@@ -22,6 +22,7 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """ initializes values for height and width if passed validator """
+        super().__init__()
         if BaseGeometry.integer_validator(self, "width", width):
             self.__width = width
         if BaseGeometry.integer_validator(self, "height", height):
