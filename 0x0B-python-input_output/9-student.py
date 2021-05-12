@@ -3,6 +3,7 @@
 dictionary description as simple data structure for JSON\
 serialization of an object."""
 
+
 class Student:
     """class Student declared with publid instance attr\
     first_name, last_name, and age"""
