@@ -33,7 +33,13 @@ class Rectangle(Base):
 
     def display(self):
         """ display is a class method; prints "Rec" to stdout"""
+        # add new lines before nested printing loops
+        for lines in range(self.y):
+            print()
         for row in range(self.height):
+            # add spaces before print of "#"
+            for spaces in range(self.x):
+                print(" ", end="")
             for column in range(self.width):
                 print("#", end="")
             print()
