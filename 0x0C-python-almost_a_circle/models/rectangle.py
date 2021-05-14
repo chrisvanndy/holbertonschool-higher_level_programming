@@ -58,4 +58,4 @@ class Rectangle(Base):
     @height.setter
     def height(self, y):
         """setter for 'x' private instance attr"""
-        self.__x = y
+        self.__height = y
