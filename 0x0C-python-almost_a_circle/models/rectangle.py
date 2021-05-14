@@ -20,6 +20,13 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        """__str__ method represents the class object Rectangle"""
+        string = "[Rectangle] ({}) ".format(self.id)
+        string += "{}/{} - {}/{}".format(self.x, self.y, self
+                                         .width, self.height)
+        return string
+
     def area(self):
         """ area is class method; returns area of rectangle"""
         return self.height * self.width
