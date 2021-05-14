@@ -17,6 +17,19 @@ class Square(Rectangle):
         sqr += "/{} - {}".format(self.y, self.size)
         return sqr
 
+    def update(self, *args, **kwargs):
+        """ update resets values for Rectangle"""
+        # *args is a tuple, typecast(args) to a new list
+        if args is None or len(args) == 0:
+            for i in kwargs:
+                if hasattr(self, i):
+                    setattr(self, i, kwargs[i])
+        else:
+            largs = list(args)
+            kwlargs = ["id", "size", "x", "y"]
+            for i in range(len(largs)):
+                setattr(self, kwlargs[i], largs[i])
+
     @property
     def size(self):
         """getter for size"""
