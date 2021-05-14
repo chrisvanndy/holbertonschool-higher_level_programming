@@ -28,24 +28,18 @@ class Rectangle(Base):
                                          .width, self.height)
         return string
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ update resets values for Rectangle"""
         # *args is a tuple, typecast(args) to a new list
-        largs = list(args)
-        if len(largs) == 5:
-            self.y = largs[4]
-            largs.pop()
-        if len(largs) == 4:
-            self.x = largs[3]
-            largs.pop()
-        if len(largs) == 3:
-            self.height = largs[2]
-            largs.pop()
-        if len(largs) == 2:
-            self.width = largs[1]
-            largs.pop()
-        if len(largs) == 1:
-            self.id = largs[0]
+        if args is None or len(args) == 0:
+            for i in kwargs:
+                if hasattr(self, i):
+                    setattr(self, i, kwargs[i])
+        else:
+            largs = list(args)
+            kwlargs = ["id", "width", "height", "x", "y"]
+            for i in range(len(largs)):
+                setattr(self, kwlargs[i], largs[i])
 
     def area(self):
         """ area is class method; returns area of rectangle"""
