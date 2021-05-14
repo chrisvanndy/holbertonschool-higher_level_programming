@@ -7,6 +7,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
+
     """ Rectangle is a subclass of Base and inherits all\
     of it's properties"""
 
@@ -27,6 +28,23 @@ class Rectangle(Base):
                                          .width, self.height)
         return string
 
+    def update(self, *args):
+        largs = list(args)
+        if len(largs) == 5:
+            self.y = largs[4]
+            largs.pop()
+        if len(largs) == 4:
+            self.x = largs[3]
+            largs.pop()
+        if len(largs) == 3:
+            self.height = largs[2]
+            largs.pop()
+        if len(largs) == 2:
+            self.width = largs[1]
+            largs.pop()
+        if len(largs) == 1:
+            self.id = largs[0]
+
     def area(self):
         """ area is class method; returns area of rectangle"""
         return self.height * self.width
@@ -34,12 +52,10 @@ class Rectangle(Base):
     def display(self):
         """ display is a class method; prints "Rec" to stdout"""
         # add new lines before nested printing loops
-        for lines in range(self.y):
-            print()
+        print("\n" * self.y, end="")
         for row in range(self.height):
             # add spaces before print of "#"
-            for spaces in range(self.x):
-                print(" ", end="")
+            print(" " * self.x, end="")
             for column in range(self.width):
                 print("#", end="")
             print()
