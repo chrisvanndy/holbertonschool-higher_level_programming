@@ -11,7 +11,7 @@ class Rectangle(Base):
     of it's properties"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        # instantiate private instance attributes 
+        # instantiate private instance attributes
         # width, height, x and y
         # call the super class with id
         super().__init__(id)
@@ -59,7 +59,3 @@ class Rectangle(Base):
     def height(self, y):
         """setter for 'x' private instance attr"""
         self.__x = y
-
-
-
-
