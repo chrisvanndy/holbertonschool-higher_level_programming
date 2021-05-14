@@ -29,6 +29,8 @@ class Rectangle(Base):
         return string
 
     def update(self, *args):
+        """ update resets values for Rectangle"""
+        # *args is a tuple, typecast(args) to a new list
         largs = list(args)
         if len(largs) == 5:
             self.y = largs[4]
