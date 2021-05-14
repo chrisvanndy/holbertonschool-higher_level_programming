@@ -24,6 +24,13 @@ class Rectangle(Base):
         """ area is class method; returns area of rectangle"""
         return self.height * self.width
 
+    def display(self):
+        """ display is a class method; prints "Rec" to stdout"""
+        for row in range(self.height):
+            for column in range(self.width):
+                print("#", end="")
+            print()
+
     @property
     def width(self):
         """getter for 'width' private instance attr"""
