@@ -19,11 +19,11 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """create will retun an instance obj with attributes set"""
-        if isinstance(cls, Square):
-            dummy = Square(1)
+        if len(dictionary) == 1:
+            dummy = cls(1)
             dummy.update(**dictionary)
         else:
-            dummy = Rectangle(1, 1)
+            dummy = cls(1, 1)
             dummy.update(**dictionary)
         return dummy
 
