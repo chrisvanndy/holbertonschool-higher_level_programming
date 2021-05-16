@@ -3,6 +3,7 @@
 
 
 from models.rectangle import Rectangle
+import inspect
 
 
 class Square(Rectangle):
@@ -16,6 +17,18 @@ class Square(Rectangle):
         sqr = "[Square] ({}) {}".format(self.id, self.x)
         sqr += "/{} - {}".format(self.y, self.size)
         return sqr
+
+    def to_dictionary(self):
+        """to_dictionary reutrns the dictionary representation of Square"""
+        sqr_dict = {}
+        for i in inspect.getmembers(self):
+            if not i[0].startswith("_"):
+                if not inspect.ismethod(i[1]) and\
+                   not inspect.isfunction(i[1]):
+                    if i[0] == "width" or i[0] == "height":
+                        continue
+                    sqr_dict[i[0]] = i[1]
+        return sqr_dict
 
     def update(self, *args, **kwargs):
         """ update resets values for Rectangle"""
