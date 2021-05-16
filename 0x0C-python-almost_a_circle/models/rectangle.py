@@ -4,7 +4,7 @@
 
 
 from models.base import Base
-
+import inspect 
 
 class Rectangle(Base):
 
@@ -27,6 +27,10 @@ class Rectangle(Base):
         string += "{}/{} - {}/{}".format(self.x, self.y, self
                                          .width, self.height)
         return string
+
+    def to_dictionary(self):
+        """ returns the dict for Rectangle"""
+        return self.__dict__
 
     def update(self, *args, **kwargs):
         """ update resets values for Rectangle"""
