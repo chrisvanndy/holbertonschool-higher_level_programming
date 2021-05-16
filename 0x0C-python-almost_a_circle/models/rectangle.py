@@ -4,10 +4,10 @@
 
 
 from models.base import Base
-import inspect 
+import inspect
+
 
 class Rectangle(Base):
-
     """ Rectangle is a subclass of Base and inherits all\
     of it's properties"""
 
@@ -30,7 +30,14 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ returns the dict for Rectangle"""
-        return self.__dict__
+    #   return self.__dict__
+        dict_rep = {}
+        for i in inspect.getmembers(self):
+            if not i[0].startswith("_"):
+                if not inspect.ismethod(i[1]) and\
+                   not inspect.isfunction(i[1]):
+                    dict_rep[i[0]] = i[1]
+        return dict_rep
 
     def update(self, *args, **kwargs):
         """ update resets values for Rectangle"""
