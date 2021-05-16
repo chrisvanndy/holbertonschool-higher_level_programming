@@ -16,6 +16,17 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @classmethod
+    def create(cls, **dictionary):
+        """create will retun an instance obj with attributes set"""
+        if isinstance(cls, square):
+            dummy = Square(1)
+            dummy.update(**dictionary)
+        else:
+            dummy = Rectangle(1, 1)
+            dummy.update(**dictionary)
+        return dummy
+
     # will reaquire cls instead of self
     @classmethod
     def save_to_file(cls, list_objs):
