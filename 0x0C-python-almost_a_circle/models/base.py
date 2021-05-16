@@ -45,6 +45,6 @@ class Base:
     def from_json_string(json_string):
         """from_json_string returns a list from the json_string"""
         if json_string is None or len(json_string) == 0:
-            return "[]"
+            return []
         new_list = json.loads(json_string)
         return new_list
