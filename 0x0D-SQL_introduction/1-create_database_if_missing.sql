@@ -1,0 +1,3 @@
+-- use CREATE
+-- use DATABASE to CREATE DATABASE <db name>
+CREATE DATABASE hbtn_0c_0;
