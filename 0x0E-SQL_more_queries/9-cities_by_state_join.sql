@@ -5,5 +5,5 @@
 SELECT `cities`.`id`, `cities`.`name`, `states`.`name`
 -- cities.state_id = state.id
 -- format wants to print cities.name so INNER JOIN sates + common elements
-	FROM `cities` INNER JOIN `states` ON `cities`.`state_id` = `state`.`id`
+	FROM `cities` INNER JOIN `states` ON `cities`.`state_id` = `states`.`id`
 ORDER BY `cities`.`id`;
