@@ -22,4 +22,3 @@ if __name__ == "__main__":
 
     for c, s in sesh.query(City, State).filter(City.state_id == State.id).all():
         print("{}: ({}) {}".format(s.name, s.id, c.name))
-
