@@ -20,5 +20,6 @@ if __name__ == "__main__":
 
     sesh = Session()
 
-    for c, s in sesh.query(City, State).filter(City.state_id == State.id).all():
+    for c, s in sesh.query(City, State)\
+                    .filter(City.state_id == State.id).all():
         print("{}: ({}) {}".format(s.name, c.id, c.name))
