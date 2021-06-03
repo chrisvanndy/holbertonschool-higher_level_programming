@@ -6,14 +6,14 @@ class Rectangle {
     this.height = h;
 
     if (w <= 0 || w === undefined) {
-      this.width = 0;
-      this.height = 0;
+      this.width = undefined;
+      this.height = undefined;
     } else {
       this.width = w;
     }
     if (h <= 0 || h === undefined) {
-      this.width = 0;
-      this.height = 0;
+      this.width = undefined;
+      this.height = undefined;
     } else {
       this.height = h;
     }
