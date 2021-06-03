@@ -36,6 +36,7 @@ class Rectangle(Base):
             if not i[0].startswith("_"):
                 if not inspect.ismethod(i[1]) and\
                    not inspect.isfunction(i[1]):
+                    # creates a key and value pair - see dict assigning logic
                     dict_rep[i[0]] = i[1]
         return dict_rep
 

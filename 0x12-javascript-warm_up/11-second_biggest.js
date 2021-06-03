@@ -10,6 +10,6 @@ if (args[0] === 'undefined' || args.length === 1) {
 
 function secondMax (arg) {
   const max = Math.max.apply(null, args);
-  args.splice(args.indexOf(max), 1);
+  args.slice(args.indexOf(max), 1);
   return Math.max.apply(null, args);
-}
+};

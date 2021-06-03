@@ -1,2 +1,4 @@
 #!/bin/bash
+# echo GLOBAL VARIABLE contents piped to python execute command 
+# because there is no .py file cannot simply run python $PYCODE
 echo $PYCODE | python3
