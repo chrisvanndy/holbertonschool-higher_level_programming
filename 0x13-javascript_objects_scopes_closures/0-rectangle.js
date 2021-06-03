@@ -2,6 +2,8 @@
 
 // 0-rectangle.js
 
-export class Rectangle {
+class Rectangle {
+      
+}
 
-};
+module.exports = Rectangle;
